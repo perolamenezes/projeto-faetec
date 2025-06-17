@@ -1,0 +1,81 @@
+/* --- RESET GERAL --- */
+/* Tira as margens e espaçamentos padrão que o navegador coloca */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Faz com que o tamanho dos elementos inclua as bordas e o padding */
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* Deixa a fonte chique do site */
+}
+
+/* --- FUNDO DO SITE --- */
+body {
+  background-color: whitesmoke; /* Cor de fundo bem clarinha para o site */
+}
+
+/* --- CABEÇALHO DO SITE (onde fica o nome e o menu) --- */
+.cabecalho {
+  background-color: #4c0000; /* Cor de fundo do cabeçalho (vermelho escuro) */
+  color: white; /* Cor das letras dentro do cabeçalho */
+  padding: 20px; /* Espaço interno no cabeçalho */
+  
+  display: flex; /* Coloca os itens (título e menu) um do lado do outro */
+  justify-content: space-between; /* Joga o título pra esquerda e o menu pra direita */
+  align-items: center; /* Alinha tudo no meio na vertical */
+}
+
+/* --- TÍTULO PRINCIPAL (o nome do site) --- */
+h1 {
+  font-size: 55px; /* Tamanho da letra do título */
+  margin-left: 30px; /* Dá um espaço entre o título e a borda esquerda */
+  margin-bottom: 10px; /* Espaço abaixo do título */
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* Fonte chique só pro título */
+}
+
+/* --- MENU (onde ficam os links) --- */
+.menu{
+  display: flex; /* Faz os links do menu ficarem lado a lado (não um embaixo do outro) */
+  gap: 100px; /* Espaço entre um link e outro */
+  font-size: 30px; /* Tamanho da letra dos links */
+  margin-right: 90px; /* Espaço entre o menu e a borda direita da*/
+  color: white;
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+}
+.menu a:hover{
+    color: whitesmoke;
+}
+img {
+  width: 100%;           /* Faz a imagem ocupar a largura da caixinha */
+  max-width: 300px;      /* Limita o tamanho máximo (fica bom em desktop) */
+  height: auto;          /* Mantém a proporção certa da foto */
+  border-radius: 10px;   /* Deixa as bordas levemente arredondadas (opcional, dá um charme) */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Faz uma sombra suave (fica mais elegante) */
+}
+
+
+.servicos {
+  display: flex;        /* Deixa os itens na horizontal */
+  flex-wrap: wrap;      /* Permite quebrar para a linha de baixo */
+  justify-content: center; /* Centraliza as linhas */
+  gap: 40px;            /* Espaço entre as caixinhas */
+  padding: 80px 35px;
+  
+}
+
+.servicos div {
+  flex: 0 0 30%;        /* Cada bloco ocupa + ou - 30% da largura, assim cabem 3 por linha */
+  text-align: center;   /* Centraliza o texto de cada serviço */
+
+}
+
+img {
+  width: 250PX;          /* Faz a imagem ocupar toda a largura da caixinha */
+  height: 250px;         /* Mantém a proporção da imagem (não deforma) */
+  max-width: 250px;     /* Limita a largura máxima das fotos */
+  object-fit: cover;
+  margin-top: 30px;
+}
+
+
