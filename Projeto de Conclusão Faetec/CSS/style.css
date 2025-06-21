@@ -10,6 +10,7 @@
 /* --- FUNDO DO SITE --- */
 body {
   background-color: whitesmoke; /* Cor de fundo bem clarinha para o site */
+  overflow-x: hidden;
 }
 
 /* --- CABEÇALHO DO SITE (onde fica o nome e o menu) --- */
@@ -21,6 +22,7 @@ body {
   display: flex; /* Coloca os itens (título e menu) um do lado do outro */
   justify-content: space-between; /* Joga o título pra esquerda e o menu pra direita */
   align-items: center; /* Alinha tudo no meio na vertical */
+  width: 100vw;
 }
 
 /* --- TÍTULO PRINCIPAL (o nome do site) --- */
@@ -52,6 +54,7 @@ img {
   height: auto;          /* Mantém a proporção certa da foto */
   border-radius: 10px;   /* Deixa as bordas levemente arredondadas (opcional, dá um charme) */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Faz uma sombra suave (fica mais elegante) */
+  cursor: pointer;
 }
 
 
@@ -71,11 +74,43 @@ img {
 }
 
 img {
-  width: 250PX;          /* Faz a imagem ocupar toda a largura da caixinha */
-  height: 250px;         /* Mantém a proporção da imagem (não deforma) */
-  max-width: 250px;     /* Limita a largura máxima das fotos */
+  width: 250px;
+  height: 250px;
+  max-width: 250px;
   object-fit: cover;
   margin-top: 30px;
+
+  border-radius: 50%;         
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
+.video-pes{
+height: 150px;
+width: 100vw;
+}
+.video-pes video{
+    width: 100%;          /* Largura total da tela */
+    height: 100%;        /* Altura fixa */
+    object-fit: cover;    /* Mantém a qualidade visual cortando o excesso se precisar */
+    
 
+}
+
+.footer-conteudo{
+  display: flex;
+  height: 200px;
+  background-color: #4c0000;
+  width: 100vw;
+  color: white;
+  justify-content: start;
+  align-items: center;
+  gap: 50px;
+font-size: 40px;
+padding-left:35px;
+}
+
+.footer-redes{
+display: flex;
+gap: 10px;
+
+}
