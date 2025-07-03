@@ -1,0 +1,195 @@
+/* Importa a fonte do Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Zera margens e ativa modelo de caixa mais intuitivo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-image: url('../Imagens/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Caixa principal */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    color: #333;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Cabeçalho */
+.header {
+    background: #4c0000;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.header p {
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+/* Conteúdo do formulário */
+.form-container {
+    padding: 40px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #4c0000;
+    font-size: 0.95rem;
+}
+
+/* Campos de entrada */
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+/* Efeito ao focar */
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #4c0000;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(76, 0, 0, 0.1);
+}
+
+/* Serviços */
+.services-group {
+    margin-bottom: 25px;
+}
+
+/* Organiza os serviços em grade */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Cada serviço individual */
+.service-option {
+    position: relative;
+}
+
+/* Esconde checkbox padrão */
+.service-option input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Estilo visual para cada serviço */
+.service-option label {
+    display: block;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    background-color: #fdfdfd;
+    font-weight: 500;
+    color: #4c0000;
+}
+
+/* Quando o serviço é selecionado */
+.service-option input[type="checkbox"]:checked + label {
+    border-color: #4c0000;
+    background-color: #842b23;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 0, 0, 0.3);
+}
+
+/* Mensagem de erro */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Campo com erro */
+.form-group.error input,
+.form-group.error select {
+    border-color: #e74c3c;
+    background-color: #fdf2f2;
+}
+
+.form-group.error .error-message {
+    display: block;
+}
+
+/* Botão de enviar */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: #4c0000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #5f0e0c;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(76, 0, 0, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Mensagem de sucesso */
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+    display: none;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Serviço</title>
+    <link rel="stylesheet" href="./CSS/agendamento.css">
+
+</head>
+<body>
+    <div class="container">
+
+        <!-- Cabeçalho com título e subtítulo -->
+        <div class="header">
+            <h1>Agendamento de Serviço</h1>
+            <p>Preencha os dados abaixo para agendar seu horário</p>
+        </div>
+
+        <!-- Área do formulário -->
+        <div class="form-container">
+
+            <!-- Mensagem de sucesso oculta (aparece só após enviar o formulário) -->
+            <div class="success-message" id="successMessage">
+                Agendamento realizado com sucesso! Entraremos em contato em breve.
+            </div>
+
+            <!-- Início do formulário -->
+            <form id="schedulingForm">
+                <!-- Campo: Nome completo -->
+                <div class="form-group">
+                    <label for="fullName">Nome Completo *</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Digite seu nome completo">
+                </div>
+
+                <!-- Campo: CPF -->
+                <div class="form-group">
+                    <label for="cpf">CPF *</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14">
+                </div>
+
+                <!-- Campo: Data -->
+                <div class="form-group">
+                    <label for="appointmentDate">Data do Serviço *</label>
+                    <input type="date" id="appointmentDate" name="appointmentDate">
+                </div>
+
+                <!-- Campo: Horário -->
+                <div class="form-group">
+                    <label for="appointmentTime">Horário do Serviço *</label>
+                    <select id="appointmentTime" name="appointmentTime">
+                        <option value="">Selecione um horário</option>
+                        <!-- Lista de horários -->
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:30">15:30</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:30">16:30</option>
+                    </select>
+                    <div class="error-message">Por favor, selecione um horário</div>
+                </div>
+
+                <!-- Campo: Seleção de serviços -->
+                <div class="services-group">
+                    <label>Serviços Desejados *</label>
+                    <div class="services-grid">
+                        <!-- Cada serviço é um checkbox -->
+                        <div class="service-option">
+                            <input type="checkbox" id="Esmaltação Tradicional" name="services" value="Esmaltação Tradicional">
+                            <label for="Esmaltação Tradicional">Esmaltação Tra - R$ 100</label>
+                        </div>
+                        <div class="service-option">
+                            <input type="checkbox" id="Manicure" name="services" value="Manicure">
+                            <label for="Manicure">Manicure - R$ 75</label>
+                        </div>
+                        <div class="service-option">
+                            <input type="checkbox" id="Pedicure" name="services" value="Pedicure">
+                            <label for="Pedicure">Pedicure - R$ 75</label>
+                        </div>
+                        <div class="service-option">
+                            <input type="checkbox" id="Spa dos pés" name="services" value="Spa dos pés">
+                            <label for="Spa dos pés">Spa dos pés - R$ 170</label>
+                        </div>
+                        <div class="service-option">
+                            <input type="checkbox" id="Alongamento" name="services" value="Alongamento">
+                            <label for="Alongamento">Alongamento - R$ 250</label>
+                        </div>
+                        <div class="service-option">
+                            <input type="checkbox" id="Podologia" name="services" value="Podologia">
+                            <label for="Podologia">Podologia - R$ 200</label>
+                        </div>
+                    </div>
+                    <div class="error-message">Por favor, selecione pelo menos um serviço</div>
+                </div>
+
+                <!-- Botão para enviar o formulário -->
+                <button type="submit" class="submit-btn">Agendar Serviço</button>
+            </form>
+        </div>
+    </div>
+
+<script>
+    // Adiciona um ouvinte de evento ao formulário com o ID 'schedulingForm'
+    // Esse evento será disparado quando o usuário tentar enviar o formulário
+    document.getElementById('schedulingForm').addEventListener('submit', function(e) {
+        // Previne o comportamento padrão do formulário (recarregar a página)
+        e.preventDefault();
+
+        // Exibe a mensagem de sucesso, tornando o elemento visível
+        document.getElementById('successMessage').style.display = 'block';
+
+        // Limpa todos os campos do formulário (nome, cpf, data, horário, checkboxes etc.)
+        this.reset();
+
+        // Rola suavemente a página para o topo do container principal
+        document.querySelector('.container').scrollIntoView({ behavior: 'smooth' });
+
+        // Aguarda 5 segundos (5000 milissegundos) e então esconde a mensagem de sucesso
+        setTimeout(() => {
+            document.getElementById('successMessage').style.display = 'none';
+        }, 5000);
+    });
+</script>
+
+
+</body>
+</html>
